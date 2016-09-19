@@ -2,6 +2,7 @@ package pokerBase;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class Deck  {
 	
@@ -17,7 +18,8 @@ public class Deck  {
 			}
 		}
 		Collections.shuffle(DeckCards);
+		
+		Collections.sort(DeckCards );
+		
 	}
-	
-
 }
