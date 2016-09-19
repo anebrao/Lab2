@@ -10,10 +10,9 @@ public class Card {
 	private int cardrank;
 	
 	// constructors 
-	public Card(int number, int suit, int rank){
+	public Card(int number, int suit){
 		cardnumber = number;
 		cardsuit = suit;
-		cardrank = rank;
 	}
 	
 	public int getCardNbr(){
@@ -24,9 +23,6 @@ public class Card {
 		return cardsuit;
 	}
 	
-	public int getCardRank(){
-		return cardrank; 
-	}
 	
 	
 }
