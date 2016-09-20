@@ -8,6 +8,7 @@ public class Deck  {
 	
 	private ArrayList<Card> DeckCards = new ArrayList<Card>();
 	
+	// generates 52 cards in the deck 
 	public Deck(){ 
 		for (int i = 0; i<4; i++)
 		{
@@ -17,9 +18,13 @@ public class Deck  {
 				DeckCards.add(c);  
 			}
 		}
+		
+		// shuffle the deck 
 		Collections.shuffle(DeckCards);
 		
-		Collections.sort(DeckCards );
-		
+		// look back at this Collections.sort(DeckCards );
+	//public card draw(){ 
+		// card newcardtaken
+	}
 	}
 }
