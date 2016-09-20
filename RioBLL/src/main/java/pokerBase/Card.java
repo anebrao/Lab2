@@ -10,7 +10,7 @@ public class Card {
 	public int cardvalue;
 	
 	// constructors 
-	public Card(int number, int suit, int value){
+	public Card(int number, int suit){
 		this.cardnumber = number;
 		this.cardsuit = suit;
 		this.cardvalue = value;
@@ -23,15 +23,15 @@ public class Card {
 	public int getCardSuit(){
 		return cardsuit;
 	}
-	public int getCardValue(){
-		return cardvalue;
-	}
+	//public int getCardValue(){
+	//	return cardvalue;
+	//}
 	
 	// setters 
 	public void setSuit(int setsuit){
 		this.cardsuit = setsuit;
 	}
-	public void setValue(int setvalue){
-		this.cardvalue = setvalue;
-	}
+	//public void setValue(int setvalue){
+	//	this.cardvalue = setvalue;
+	//}
 }
