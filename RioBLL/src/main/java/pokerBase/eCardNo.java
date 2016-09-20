@@ -14,7 +14,7 @@ public enum eCardNo {
 	public int getcardvalue(){
 		return cardvalue;
 	}
-	public int compareto(card card){
+	public int compareto(Card card){
 		return this.cardvalue - card.cardvalue;
 	}
 	

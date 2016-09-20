@@ -5,7 +5,7 @@ package pokerBase;
 public class Card {
 	
 	// fields 
-	private  int cardnumber;
+	private int cardnumber;
 	private int cardsuit;
 	public int cardvalue;
 	
@@ -13,7 +13,6 @@ public class Card {
 	public Card(int number, int suit){
 		this.cardnumber = number;
 		this.cardsuit = suit;
-		this.cardvalue = value;
 	}
 	
 	//getters 

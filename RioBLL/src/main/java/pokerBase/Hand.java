@@ -7,7 +7,7 @@ import java.util.UUID;
 public class Hand {
 	private ArrayList<Card> CardsInHand = new ArrayList<Card>();
 
-	public evalHand()
+	public void evalHand()
 	{ 
 		CardsInHand.get(0);
 		
