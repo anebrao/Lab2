@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 
 public class HandScore {
 	// fields
+	private boolean Natural = true;
 	private ArrayList<Card> Kickers = new ArrayList<Card>();
 	private int HandStrength;
 	private int HiHand;
@@ -30,5 +31,35 @@ public class HandScore {
 	public void setHandStrength(int handStrength){
 		HandStrength = handStrength; 
 	}
+	public int getHiHand(){
+		return HiHand;
+	}
+	public void setHiHand(int hiHand){
+		HiHand = hiHand;
+	}
+
+	public int getLoHand() {
+		return LoHand;
+	}
+
+	public void setLoHand(int loHand) {
+		LoHand = loHand;
+	}
+
+	public ArrayList<Card> getKickers() {
+		return Kickers;
+	}
+
+	public void setKickers(ArrayList<Card> kickers) {
+		Kickers = kickers;
+	}
+
+	boolean isNatural() {
+		return Natural;
+	}
+
+	void setNatural(boolean natural) {
+		Natural = natural;
+	}
+	
 }
- //more methods to be added
