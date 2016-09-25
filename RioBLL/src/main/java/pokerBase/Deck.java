@@ -26,7 +26,6 @@ public class Deck {
 		Card newcardtaken = DeckCards.get(0);
 		DeckCards.remove(0);
 		return newcardtaken;
-
-	
 	}
+
 }
