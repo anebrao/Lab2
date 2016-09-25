@@ -7,7 +7,7 @@ public enum eCardSuit {
 
 	private int cardsuit;
 
-	private Card_Suit(final int suit) {
+	private eCardSuit(final int suit) {
 		this.cardsuit = suit;
 	}
 
