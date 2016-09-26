@@ -1,24 +1,103 @@
 package pokerBase;
-
+import java.util.Comparator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.UUID;
 
 public class Hand {
-	private ArrayList<Card> CardsInHand = new ArrayList<Card>();
-
-	public void evalHand()
-	{ 
-		CardsInHand.get(0);
+	
+	private ArrayList<Card> hand = new ArrayList<Card>();
+	private Deck deck = new Deck();
+	
+	public Hand() {
 		
-	}
-	public ArrayList<Card> getCardsInHand() {
-		return CardsInHand;
-	}
+		for (int index = 0; index < 5; index++) {
+			hand.add(deck.draw());}
+		}
+	
+		
+		
+		
 
-	public void setCardsInHand(ArrayList<Card> cardsInHand) {
-		CardsInHand = cardsInHand;
-	}
+    public static Hand arraylistSort(ArrayList<Card> arr) {
+      int i, j, minIndex;
+      int n = arr.size();
+      for (i = 0; i < n - 1; i++){
+        minIndex = i;
+
+        for (j = i +1; j < n; j++){
+          if (arr.get(j).getRank().getCardValue() < arr.get(minIndex).getRank().getCardValue()){
+            minIndex = j;
+          if (minIndex != i) {
+            arr.add(arr.get(minIndex));
+            arr.add(arr.get(i));
+            
+          }
+          }
+        }
+      }
+      ArrayList<Card> sortedHand = arr;
+	return null;
+    }
 
 
-}
+    public static boolean isFlush(ArrayList<Card> hand){
+      if (hand.get(0).getCardSuit() == hand.get(1).getCardSuit()){
+        if (hand.get(1).getCardSuit() == hand.get(2).getCardSuit()){
+          if (hand.get(2).getCardSuit() == hand.get(3).getCardSuit())
+              {if (hand.get(3).getCardSuit() == hand.get(4).getCardSuit())
+                {return true;}
+              else {return false;}
+              
+            }else {return false;}
+          }else {return false;}
+      }else {return false;}
+    }
+  
+
+    public static boolean isStraight(ArrayList<Card> hand) {
+      int counter = 1;
+      for (int i = 1; i>4; i++){
+        if (hand.get(0).getRank().getCardValue() + i == hand.get(i).getRank().getCardValue()){
+          counter = counter + 1;
+      } else {counter = 0;}
+      }
+      
+      if (counter == 5){ return true;}
+      else {return false;}
+    }
+
+    public static boolean isRoyalFlush(ArrayList<Card> hand) {
+      if (hand.get(0).getCardSuit() == hand.get(1).getCardSuit() && hand.get(1).getCardValue() - 1 ==     hand.get(0).getCardValue()){
+            if (hand.get(1).getCardSuit() == hand.get(2).getCardSuit() && hand.get(2).getCardValue() - 1 == hand.get(1).getCardValue()){
+              if (hand.get(2).getCardSuit() == hand.get(3).getCardSuit() && hand.get(3).getCardValue() - 1 == hand.get(2).getCardValue())
+                  if ((hand.get(3).getCardSuit() == hand.get(4).getCardSuit() && hand.get(4).getCardValue() - 1 == hand.get(3).getCardValue()))
+                    if ((hand.get(4).getCardSuit() == hand.get(5).getCardSuit() && hand.get(5).getCardValue() - 1 == hand.get(4).getCardValue()))
+                    {return true;}
+                  else {return false;}         
+                }else {return false;}
+              }else {return false;}
+	return false;}
+    
+  //not sure about this 3 of a kind one
+    public static boolean is3ofKind(ArrayList<Card> hand) {
+      arraylistSort(hand);
+      if (hand.get(0) == hand.get(1)){
+        if (hand.get(1) == hand.get(2)){
+            return true;
+          } else{return false;}
+          
+        }
+        else if (hand.get(3)==hand.get(4)){
+        if (hand.get(3) == hand.get(2)){
+            return true;
+          }
+          else {return false;}
+        } else if (hand.get(1)==hand.get(2)){
+          if (hand.get(2)==hand.get(3)) {return true;}
+      }  
+      else{return false;}
+	return false;
+      }
+    
+  }

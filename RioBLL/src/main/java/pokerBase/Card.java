@@ -3,9 +3,9 @@ package pokerBase;
 import java.util.Comparator;
 
 
-
 public class Card {
-	
+	private Card rank;
+
 	// fields 
 	private int cardsuit;
 	public int cardvalue;
@@ -30,5 +30,8 @@ public class Card {
 	}
 	public void setValue(int setvalue){
 		this.cardvalue = setvalue;
+	}
+	public Card getRank() {
+		return rank;
 	}
 }
