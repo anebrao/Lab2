@@ -46,10 +46,22 @@ public class HandTest {
 
 	@Test
 	public void TestFourOfAKind() {	
-	}
+		Hand h = new Hand();
+		ArrayList<Card> FourofAKind = new ArrayList<Card>();
+		FourofAKind.add(new Card(10,1));
+		FourofAKind.add(new Card(11,1));
+		FourofAKind.add(new Card(12,1));
+		FourofAKind.add(new Card(13,1));
+		FourofAKind.add(new Card(14,1));}
 
 	@Test
 	public void TestStraightFlush() {	
-	}
+		Hand h = new Hand();
+		ArrayList<Card> StraightFlush = new ArrayList<Card>();
+		StraightFlush.add(new Card(10,1));
+		StraightFlush.add(new Card(11,1));
+		StraightFlush.add(new Card(12,1));
+		StraightFlush.add(new Card(13,1));
+		StraightFlush.add(new Card(14,1));}
 	
 }
