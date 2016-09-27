@@ -31,9 +31,13 @@ public class DeckTest {
 	}
 
 	@Test
-	public void BuildDeck(){	
+	public void BuildDeck(){
+		Deck d = new Deck();
 	}
 
+	@Test
 	public void DeckOverDraw()  {
+
+		
 	}
 }

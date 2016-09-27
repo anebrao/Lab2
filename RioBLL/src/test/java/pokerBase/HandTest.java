@@ -2,12 +2,14 @@ package pokerBase;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import pokerBase.Card;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
 public class HandTest {
 
 	@BeforeClass
@@ -29,6 +31,17 @@ public class HandTest {
 	
 	@Test
 	public void TestRoyalFlush() {	
+			Hand h = new Hand();
+			ArrayList<Card> RoyalFlush = new ArrayList<Card>();
+			RoyalFlush.add(new Card(10,1));
+			RoyalFlush.add(new Card(11,1));
+			RoyalFlush.add(new Card(12,1));
+			RoyalFlush.add(new Card(13,1));
+			RoyalFlush.add(new Card(14,1));
+
+			
+
+			
 	}
 
 	@Test
