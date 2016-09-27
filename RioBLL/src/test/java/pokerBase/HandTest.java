@@ -1,7 +1,9 @@
 package pokerBase;
 
 import static org.junit.Assert.*;
-
+import pokerBase.eCardValue;
+import pokerBase.eCardSuit;
+import pokerEnums.eRank;
 import java.util.ArrayList;
 import pokerBase.Card;
 
@@ -39,7 +41,8 @@ public class HandTest {
 			RoyalFlush.add(new Card(13,1));
 			RoyalFlush.add(new Card(14,1));
 
-			
+			assertTrue(h.getHs().getHandStrength() == eCardValue.RoyalFlush.getHandStrength());
+			assertTrue(h.getHs().getHiHand() == eCardValue.ACE.getiRankNbr());
 
 			
 	}
@@ -52,8 +55,10 @@ public class HandTest {
 		FourofAKind.add(new Card(11,1));
 		FourofAKind.add(new Card(12,1));
 		FourofAKind.add(new Card(13,1));
-		FourofAKind.add(new Card(14,1));}
+		FourofAKind.add(new Card(14,1));
+	
 
+	}
 	@Test
 	public void TestStraightFlush() {	
 		Hand h = new Hand();

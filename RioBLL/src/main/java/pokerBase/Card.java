@@ -1,6 +1,8 @@
 package pokerBase;
 
 import java.util.Comparator;
+import pokerEnums.eRank;
+import pokerBase.eCardSuit;
 
 
 public class Card {
@@ -9,6 +11,9 @@ public class Card {
 	// fields 
 	private int cardsuit;
 	public int cardvalue;
+	private int iCardNbr;
+	private boolean bWild;
+
 	
 	// constructors 
 	public Card(int value, int suit){
@@ -33,5 +38,22 @@ public class Card {
 	}
 	public Card getRank() {
 		return rank;
+	}
+	public static Comparator<Card> CardRank = new Comparator<Card>() {
+
+		public int compare(Card c1, Card c2) {
+
+		   int Cno1 = c1.getRank().getCardValue();
+		   int Cno2 = c2.getRank().getCardValue();
+
+		   /*For descending order*/
+		   return Cno2 - Cno1;
+
+	   }};
+	   
+	public int compareTo(Object o) {
+	    Card c = (Card) o; 
+	    return c.getRank().compareTo(this.getRank()); 
+
 	}
 }

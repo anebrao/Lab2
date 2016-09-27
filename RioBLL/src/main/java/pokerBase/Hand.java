@@ -169,4 +169,8 @@ public class Hand {
 
 		}
 	}
+
+	public Object getHs() {
+		return null;
+	}
 }
