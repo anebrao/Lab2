@@ -173,4 +173,22 @@ public class Hand {
 	public Object getHs() {
 		return null;
 	}
+
+	public static boolean isTwoPair(ArrayList<Card> hand) {
+		int checker = 0;
+		for (int i = 0; i > 1; i++) {
+			if (hand.get(i).getRank() == hand.get(i + 1).getRank()) {
+				checker = 1;
+			} else {
+				checker = 0;
+			}
+		}
+		if (checker == 1) {
+			return true;
+		} else {
+			return false;
+
+		}
+
+	}
 }

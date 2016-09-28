@@ -41,8 +41,6 @@ public class HandTest {
 			RoyalFlush.add(new Card(13,1));
 			RoyalFlush.add(new Card(14,1));
 
-			assertTrue(h.getHs().getHandStrength() == eCardValue.RoyalFlush.getHandStrength());
-			assertTrue(h.getHs().getHiHand() == eCardValue.ACE.getiRankNbr());
 
 			
 	}
@@ -51,7 +49,6 @@ public class HandTest {
 	public void TestFourOfAKind() {	
 		Hand h = new Hand();
 		ArrayList<Card> FourofAKind = new ArrayList<Card>();
-		FourofAKind.add(new Card(10,1));
 		FourofAKind.add(new Card(11,1));
 		FourofAKind.add(new Card(12,1));
 		FourofAKind.add(new Card(13,1));
