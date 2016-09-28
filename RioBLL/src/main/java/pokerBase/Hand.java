@@ -19,11 +19,11 @@ public class Hand {
 
 	public static Hand arraylistSort(ArrayList<Card> arr) {
 		int i, j, minIndex;
-		int n = arr.size();
-		for (i = 0; i < n - 1; i++) {
+		int arry = arr.size();
+		for (i = 0; i < arry - 1; i++) {
 			minIndex = i;
 
-			for (j = i + 1; j < n; j++) {
+			for (j = i + 1; j < arry; j++) {
 				if (arr.get(j).getRank().getCardValue() < arr.get(minIndex).getRank().getCardValue()) {
 					minIndex = j;
 					if (minIndex != i) {
