@@ -100,7 +100,6 @@ public class Hand {
 		return false;
 	}
 
-	// not sure about this 3 of a kind one
 	public static boolean is3ofKind(ArrayList<Card> hand) {
 		arraylistSort(hand);
 		if (hand.get(0) == hand.get(1)) {
